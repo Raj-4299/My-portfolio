@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praharsh Raj - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="content-fit">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li><button onclick="window.location.href='#banner'" class="nav-button">Home</button></li>
+                    <li><button onclick="window.location.href='#contact'" class="nav-button">Contacts</button></li>
+                    <li><button onclick="window.location.href='category.html'" class="nav-button">Category</button></li>
+                    <li><button onclick="window.location.href='login.html'" class="nav-button">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="section" id="banner">
+        <div class="content-fit">
+            <div class="title" data-before="WEBDEVELOPER">PRAHARSH RAJ</div>
+        </div>
+        <img src="" class="decorate" alt="" style="width: 50vw; bottom: 0; right: 0;">
+        <img src="" class="decorate" alt="" style="width: 30vw; bottom: 0; left: 0;">
+    </div>
+    <div class="section" id="intro">
+        <div class="content-fit">
+            <div class="number">01</div>
+            <div class="des">
+                <div class="title">About Me</div>
+                <p>I'm Praharsh Raj, a passionate Full-Stack Developer with expertise in building dynamic, user-centric applications. My journey in technology blends creativity with problem-solving—I thrive on transforming ideas into functional digital experiences. </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="description">
+        <div class="content-fit">
+            <div class="number">02</div>
+            <div class="des">
+                <div class="title">Journey</div>
+                <p>My academic foundation at Dr. Sudhir Chandra Sur Institute of Technology (Kolkata) and hands-on internships like at Cognifyz—where I developed a Netflix Clone and weather app—sharpened my technical agility. Currently, as a Customer Service Executive at Kochar Tech, I combine technical skills with user empathy, optimizing systems to reduce resolution times by 80%.</p>
+            </div>
+        </div>
+        <img src="image/bg.png" class="decorate" alt="" style="width: 70vw; bottom: 0; right: 0; z-index: 101;">
+    </div>
+    <div class="section" id="contact">
+        <div class="content-fit">
+            <div class="number">03</div>
+            <div class="des">
+                <div class="title">CONTACT</div>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>praharshraj02@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>7564914299</td>
+                    </tr>
+                    <tr>
+                        <td>Linkedin</td>
+                        <td><a href="https://www.linkedin.com/in/praharsh-raj-9b6556258/" target="_blank">linkedin.com/in/praharsh-raj</a></td>
+                    </tr>
+                    <tr>
+                        <td>Twitter</td>
+                        <td><a href="https://x.com/PraharshRaj7" target="_blank">x.com/PraharshRaj7</a></td>
+                    </tr>
+                </table>
+                <div class="sign">PRAHARSH</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container3D"></div>
+    <script type="module" src="app.js"></script>
+    
+    <style>
+        /* Add this to your style.css or in the head section */
+        .nav-button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            color: #4f46e5; /* Change to your preferred hover color */
+            transform: translateY(-2px);
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        table a {
+            color: #4f46e5;
+            text-decoration: none;
+        }
+        
+        table a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</body>
+</html>

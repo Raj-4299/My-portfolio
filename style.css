@@ -1,0 +1,455 @@
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #1B1B1B;
+    color: #ab5c3a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-image:
+    url(img/bg.png),
+    repeating-linear-gradient(
+        to right, transparent 0 500px, #73814B33 500px 501px
+    );
+    background-size: 100%;
+}
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-fit {
+    width: min(1200px, 90vw);
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-block: 10em;
+}
+header {
+    padding-block: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    background-color: #4d4d4d11;
+    background-image: repeating-linear-gradient(
+        to right, transparent 0 500px, #eee1 500px 501px
+    );
+}
+header .content-fit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: unset!important;
+    padding-block: unset!important;
+}
+header .content-fit nav ul{
+    display: flex;
+    gap: 2em;
+}
+
+/* Add this to your existing nav styles */
+nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+nav a, .nav-button {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav a:hover, .nav-button:hover {
+    color: #ffcb48;
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    color: #ffcb48;
+    border-bottom: 2px solid #ffcb48;
+}
+
+#banner .title {
+    color: #ffcb48;
+    font-size: 11em;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+#banner .title::before {
+    content: attr(data-before);
+    position: absolute;
+    top: 0.5em;
+    inset: 0.66em 0 0 0;
+    z-index: -1;
+    color: #974922;
+}
+.section .decorate {
+    position: absolute;
+}
+#intro .content-fit {
+    display: flex;
+    gap: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+.section .number {
+    font-family: "devil breeze";
+    font-size: 15em;
+    font-weight: bold;
+}
+.section .content-fit .title {
+    font-family: "devil breeze";
+    font-size: 5em;
+    font-weight: bold;
+}
+#description .content-fit {
+    padding-right: 30%;
+}
+#description .number {
+    font-size: 5em;
+}
+#description .title {
+    font-size: 7em;
+    font-weight: 500;
+}
+#contact .content-fit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#contact table {
+    width: min(800px, 90vw);
+    padding-top: 2em;
+    font-size: 2em;
+    margin: auto;
+}
+#contact table td {
+    padding-block: 0.5em;
+    border-bottom: 1px dashed #503722;
+}
+#contact table td:nth-child(1) {
+    text-align: left;
+    font-weight: 500;
+}
+#contact table td:nth-child(2) {
+    text-align: right;
+    font-weight: 200;
+}
+#contact .sign {
+    font-family: 'Bimbo', sans-serif;
+    font-size: 10em;
+}
+#container3D {
+    position: fixed;
+    inset: 0;
+    /* background-color: red; */
+    z-index: 100;
+    pointer-events: none;
+}
+@media screen and (max-width: 1023px){
+    #banner .title {
+        font-size: 5em;
+    }
+    #intro .content-fit {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 767px){
+    #banner .title {
+        font-size: 3em;
+    }
+    #intro .content-fit {
+        flex-direction: column;
+    }
+    .section .number {
+        font-size: 5em;
+    }
+    .section .content-fit .title {
+        font-size: 2em;
+    }
+    #description .content-fit {
+        padding-right: 0;
+    }
+    #contact table {
+        font-size: 1em;
+    }
+    #contact .sign {
+        font-size: 2em;
+    }
+    #container3D {
+        position: absolute;
+    }
+}
+
+/* ==================== */
+/* CATEGORY PAGE STYLES */
+/* ==================== */
+.category-page {
+    background-color: #1B1B1B;
+    color: #ab5c3a;
+    background-image: url(img/bg.png),
+                    repeating-linear-gradient(
+                        to right, transparent 0 500px, #73814B33 500px 501px
+                    );
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.category-card {
+    background-color: #2d2d2d;
+    border: 1px solid #503722;
+    border-radius: 10px;
+    padding: 2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 203, 72, 0.1);
+}
+
+.category-card h2 {
+    font-family: "devil breeze";
+    font-size: 2.5em;
+    color: #ffcb48;
+    margin-bottom: 0.5em;
+}
+
+.category-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.category-page .content-fit {
+    padding-top: 8em;
+}
+
+.category-page-title {
+    font-family: "devil breeze";
+    font-size: 5em;
+    color: #ffcb48;
+    text-align: center;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.category-page-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #ab5c3a;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 3em;
+    padding: 0.8em 1.5em;
+    background-color: #503722;
+    color: #ffcb48;
+    font-family: "devil breeze";
+    font-size: 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #3a2a1a;
+}
+
+/* ================= */
+/* LOGIN PAGE STYLES */
+/* ================= */
+.login-page {
+    background-color: #1B1B1B;
+    color: #ab5c3a;
+    background-image: url(img/bg.png),
+                    repeating-linear-gradient(
+                        to right, transparent 0 500px, #73814B33 500px 501px
+                    );
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.login-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background-color: #4d4d4d11;
+    background-image: repeating-linear-gradient(
+        to right, transparent 0 500px, #eee1 500px 501px
+    );
+}
+
+.login-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin-top: 80px; /* Account for fixed header */
+}
+
+.login-container {
+    background-color: #2d2d2d;
+    border: 1px solid #503722;
+    border-radius: 10px;
+    padding: 3em;
+    width: min(500px, 90vw);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: auto; /* Ensures centering */
+}
+
+.login-title {
+    font-family: "devil breeze";
+    font-size: 3.5em;
+    color: #ffcb48;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Rest of your login styles remain the same */
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-family: "devil breeze";
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #ffcb48;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1em;
+    background-color: #1B1B1B;
+    border: 1px solid #503722;
+    border-radius: 5px;
+    color: #ab5c3a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffcb48;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1em;
+    background-color: #503722;
+    color: #ffcb48;
+    border: none;
+    border-radius: 5px;
+    font-family: "devil breeze";
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #3a2a1a;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 0.5em;
+    color: #ab5c3a;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #ffcb48;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup-link a {
+    color: #ffcb48;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #ab5c3a;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+    .login-main {
+        margin-top: 60px;
+        padding: 1em;
+    }
+    
+    .login-container {
+        padding: 2em;
+    }
+    
+    .login-title {
+        font-size: 2.5em;
+    }
+    
+    .form-group label {
+        font-size: 1.3em;
+    }
+}
